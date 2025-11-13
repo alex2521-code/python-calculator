@@ -41,13 +41,13 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calc.multiply(5, 0), 0)
         self.assertEqual(self.calc.multiply(0, 5), 0)
 
-    # def test_divide(self):
-    #     # integer division
-    #     self.assertEqual(self.calc.divide(10, 2), 5)
-    #     self.assertEqual(self.calc.divide(9, 2), 4)  # 9 // 2 == 4
-    #     self.assertEqual(self.calc.divide(0, 3), 0)
-    #     with self.assertRaises(ZeroDivisionError):
-    #         self.calc.divide(5, 0)
+    def test_divide(self):
+        # integer division
+        self.assertEqual(self.calc.divide(10, 2), 5)
+        self.assertEqual(self.calc.divide(9, 2), 4)  # 9 // 2 == 4
+        self.assertEqual(self.calc.divide(0, 3), 0)
+        with self.assertRaises(ZeroDivisionError):
+            self.calc.divide(5, 0)
 
     # def test_modulo(self):
     #     self.assertEqual(self.calc.modulo(10, 3), 1)
